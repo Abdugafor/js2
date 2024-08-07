@@ -1,33 +1,72 @@
-// const random = Math.floor(Math.random() * 10) + 1
-// let popitka = 3
+// let tasks = []
 
-// while (popitka > 0) {
-//     let rakamiOdam =  Number(prompt('Введите число от 1 до 10'))
+// while (true) {
+//     const answer = prompt('Что вы хотите сделать (1 2 3)')
 
-//     if (rakamiOdam === random) {
-//         popitka = 0
-//         alert('Табрик Ефти')
-//     }else {
-//         popitka = popitka - 1
-//         alert('Наефти')
+//     if (answer === '1') {
+//         addTask()
+//     }else if(answer === '2') {
+//         showTasks()
+//     }else if (answer === '3') {
+//         alert('Всего хорошего')
+//         break
 //     }
 // }
 
-// const list = [7, 2 , 3, 10 , 30]
-// list.length
-// list[0] = 100
-// list[4] = 200
-// console.log(list)
 
-// const list = ['Себ', 'Персик', 'Банан']
-// const reserv = list[0]
-// list[0] = list [2]
-// list[2] = reserv
-// // list.push('ананас')
-// // list.unshift('И аввалдай')
-// // list.pop()
-// // list.shift()
+// function addTask() {
+//     const task = prompt('Чи мехохи добавить кадан?')
+//     tasks.push(task)
+//     alert('Выполнено')
+// }
 
-// const list = ['Душанбе', 'Хучанд', 'Москва', 'Cанкт-петербург']
+// function showTasks() {
+//     let otvet = ''
 
-// console.log(list)
+//     for (let i = 0; i < tasks.length; i++) {
+//         otvet += tasks[i] + ' ' + '\n'
+//     }
+
+//     alert(otvet)
+// }
+
+// const users = [10, 15 , 18, 20, 22 ,7, 12]
+
+
+// users.forEach(item => {
+//     console.log(item)
+// })
+
+// const newArray = users.filter(item => item  <= 18)
+// console.log(newArray)
+
+// const products = ["Яблоко", 'Банан', "Яблоко" , 'Мандарин']
+
+const text = document.getElementById('text')
+// const btn = document.getElementById('btn')
+const kalonBtn = document.getElementById('kalon')
+const maydaBtn = document.getElementById('mayda')
+
+// btn.addEventListener('click', changeColor)
+
+// function changeColor() {
+//     text.style.backgroundC
+// }
+
+let size = 20
+text.style.fontSize = size + 'px'
+
+kalonBtn.addEventListener('click', kalon)
+maydaBtn.addEventListener('click', mayda)
+
+function kalon() {
+    size = size + 1
+    text.style.fontSize = size + 'px'
+
+}
+
+function mayda() {
+    size = size - 1
+    text.style.fontSize = size + 'px'
+
+}
